@@ -1,0 +1,1 @@
+alter table users add headimage text COMMENT '第三方登录头像';

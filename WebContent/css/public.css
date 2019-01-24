@@ -1,0 +1,8 @@
+*{margin:0;padding:0;}
+html,body{width:100%;height:100%}
+body{background-color:#9e9e9e;}
+.main{width:100%;height:98%;margin:0;padding:0;text-align:center;position:absolute;top:1%;background:red;min-height:630px;min-width:798px}
+#left{width:20%;height:100%;position:relative;left:0;top:0;min-width:126px;background:blue;}
+#right{width:80%;height:100%;position:absolute;left:20%;top:0;min-width:504px;background:white;}
+.logo{width:100%;height:60px;background:#ffe3ed;}
+.logo img{height:60px}

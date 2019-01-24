@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,a,p,span,img,input,textarea,ul,li,ol,dl,dt,dd,h1,h2,h3,h4{ padding:0; margin:0; border:0; list-style:none; outline:none;}
+body{font-size:14px;font-family:"微软雅黑"; color:#333; background:#f3f3f3;}
+a{ color:#333; text-decoration:none; outline:none;}
+a:hover{ text-decoration:none; color:#333;}
+
+/*--------------------商品管理之新建商品页面----------------------------------*/
+#manage .setion{ width:100%; background:#fff; overflow:hidden; border-bottom:1px solid #d1d1d1;}
+.setion .left{ float:left; width:15%; text-align:center; border-right:1px solid #d1d1d1; box-sizing:border-box; font-size:1.2rem; line-height:4.0rem;}
+.setion .right{ float:left; width:85%;}
+.setion01 .right{ font-size:1.0rem; line-height:4.0rem; padding-left:5.0rem; box-sizing:border-box;}
+.setion02 .right input{ margin-left:1.0rem; font-size:0.9rem; background:#ececec; line-height:3.0rem; margin-top:0.5rem; width:45%; border-radius:0.3rem; padding-left:0.5rem;}
+.setion03 .right input{ margin-left:1.0rem; font-size:0.9rem; background:#ececec; line-height:3.0rem; margin-top:0.5rem; width:45%; border-radius:0.3rem; padding-left:0.5rem;}
+.setion04 .left{ line-height:10.0rem;}
+.setion04 .right{ padding:0.5rem 0;}
+.setion04 .right p select{ margin:0.5rem 0 0.5rem 1.0rem; width:22%; font-size:0.9rem; line-height:2.0rem; height:2.0rem; background:#ececec; border:0; text-align:center; color:#666;}
+.setion05 .right input{ margin-left:1.0rem; font-size:0.9rem; background:#ececec; line-height:3.0rem; margin-top:0.5rem; width:20%; border-radius:0.3rem; padding-left:0.5rem;}
+.setion05 .right span{ font-size:1.2rem;}
+.setion06 .left{ line-height:10.0rem;}
+.setion06 .right p{ font-size:0.9rem; line-height:3.0rem; padding-left:2.0rem; color:#999;}
+.setion06 .right .chek{ background:#f3f3f3; padding-left:1.0rem;}
+.setion06 .chek ul{ width:55%; overflow:auto; padding:0.5rem 0;}
+.setion06 .chek ul li{ width:25%; float:left; margin:0.5rem 0; font-size:0.9rem;}
+#manage .setion07{ border-bottom:0; background:#f3f3f3;}
+.setion07 .right{ float:right; border-left:1px solid #d1d1d1; padding:4.0rem 20%; box-sizing:border-box;}
+.setion07 .right input{ font-size:1.1rem; line-height:3.5rem; background:#bec2c5; color:#fff; width:30%; border-radius:3px; margin:0 5%;}
+.setion07 .right input.hover{ background:#0e93d8;}
+
+/*--------------------商品管理之编辑图片视频页面----------------------------------*/
+/*-------------第一部分上传主图--------------------*/
+.setion_01 .main_pic{ overflow:hidden;}
+.setion_01 .main_pic .pic_s{ float:left; width:8.0rem; height:8.0rem; overflow:hidden;}
+.setion_01 .pic_s img{ width:8.0rem;}
+.setion_01 .main_pic .upload_sall{ float:left;}
+.setion_01 .upload_sall{ overflow:hidden; width:8.0rem; margin:3.0rem auto; margin-left:2.0rem; height:30px; line-height:30px; text-align:center; display:block; color:#fff; cursor:pointer; font-size:14px; position:relative;}
+.setion_01 .upload{display:block; position:absolute; left:0; top:-10px; width:8.0rem; background:#3498db; margin:10px auto; height:30px; line-height:2.0rem; text-align:center; color:#fff; cursor:pointer; font-size:1.0rem; border-radius:3px;}
+.setion_01 .upload:hover{ background:#0083d4;}
+.setion_01 #upload_pic{ position:absolute; right:0; top:0; z-index:10; cursor:pointer; opacity:0;}
+.setion_01 .right{ padding:1.0rem; box-sizing:border-box;}
+.setion_01 .left{ line-height:10.0rem;}
+/*-------------第二部分上传多图--------------------*/
+.setion_02 .main_pic{ overflow:hidden;}
+.setion_02 .main_pic .pic_sd{ float:left; width:8.0rem; height:8.0rem; overflow:hidden;}
+.setion_02 .pic_sd img{ width:8.0rem;}
+.setion_02 .main_pic .upload_sall{ float:left;}
+.setion_02 .upload_sall{ overflow:hidden; width:6.0rem; margin:1.0rem 0; margin-left:2.0rem; height:6.0rem; line-height:30px; text-align:center; display:block; color:#fff; cursor:pointer; font-size:14px; position:relative;}
+.setion_02 .upload{display:block; position:absolute; left:0; top:-10px; width:6.0rem; background:#ececec; margin:10px auto; height:6.0rem; line-height:5.0rem; text-align:center; color:#999999; cursor:pointer; font-size:5.0rem; border-radius:5px;}
+.setion_02 .upload:hover{ background:#ececec;}
+.setion_02 #upload_picd{ position:absolute; right:0; top:0; z-index:10; cursor:pointer; opacity:0; width:6.0rem; height:6.0rem;}
+.setion_02 .right{ padding:1.0rem; box-sizing:border-box;}
+.setion_02 .left{ line-height:10.0rem;}
+
+
+/*---------第三部分上传视频-----------------------*/
+.setion_03 .left{ line-height:8.0rem;}
+.setion_03 .video{float:left; width:85%; text-align:center; padding:1.0rem 0;}
+.setion_03 .video p{ text-align:center; line-height:1.5rem; color:#999; font-size:1.0rem; margin-top:1.0rem;}
+.setion_03 .video p i{ font-style:normal; color:#fe2d45;}
+.setion_03 .video span{ background:#0e93d8; color:#fff; border-radius:2px; position:relative; font-size:1.0rem; line-height:30px; width:8.0rem; display:block; margin:0 auto;}
+.setion_03 .video #fileupload{ position:absolute; top:0; left:0; opacity:0; width:100%; height:100%; cursor:pointer;}
+
+/*---------第四五部分商品标签、商品说明、预览保存-----------------------*/
+.setion_04 .right .chek{ background:#fff;}
+
+.setion_05 .left{ line-height:8.0rem;}
+.setion_05 .right{ padding:1.0rem; box-sizing:border-box;}
+.setion_05 .right textarea{ border:1px solid #d1d1d1; width:50%; height:6.0rem; resize:none; padding:0.5rem; box-sizing:border-box; font-size:0.9rem; color:#666;}
+
+.setion_06{ background:#fff; border-bottom:1px solid #d1d1d1; padding:5.0rem 25%;}
+.setion_06 input{ width:25%; background:#cccccc; color:#fff; font-size:1.0rem; line-height:3.0rem; border-radius:3px; margin-right:5%; cursor:pointer;}
+.setion_06 input.hover{ background:#10a6e1;}
+
+
+
+
+
+
+
+
+
+

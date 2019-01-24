@@ -1,0 +1,1 @@
+alter table seller add parent_seller INT(11) COMMENT '所属主店';

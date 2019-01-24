@@ -1,0 +1,47 @@
+.common-page-box {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-size:12px;
+}
+.page_disable{
+	background:#f3f3f3;
+	border:1px solid #efefef;
+	padding:2px 6px;
+	color:#999999;
+	margin:0 2px;
+}
+.page_current{
+	background:#2d84b9;
+	color:white;
+	padding:3px 7px;
+	margin:0 2px;
+}
+.page_total_info {
+	color:#777;
+}
+.page_go_info {
+	color:#777;	
+}
+.page_go_info_text{
+	margin:0 4px;
+	border:1px solid #ccc;
+	width:25px;
+}
+.page_go_info_button{
+	margin-left:4px;
+	line-height:normal;
+	height:22px;
+	font-size:12px;
+	width:35px;
+}
+.common-page-box a {
+	margin:0 2px;
+	border:1px solid #2c5398;
+	padding:2px 6px;
+	text-decoration:none;
+	color:#033d61;
+}
+body{
+	background:none;
+}

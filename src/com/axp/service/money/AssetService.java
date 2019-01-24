@@ -1,0 +1,1 @@
+package com.axp.service.money;import java.util.List;import com.axp.model.SellerMoneyRecord;public interface AssetService {	Double getSellerPreMoney(Integer sellerId);	List<SellerMoneyRecord> getRecordsByConfirmed(Integer sellerId,			Boolean isConfirmed);}

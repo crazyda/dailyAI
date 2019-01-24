@@ -1,0 +1,1 @@
+package com.axp.dao;import com.axp.model.Caution;public interface CautionDAO extends IBaseDao<Caution> {}

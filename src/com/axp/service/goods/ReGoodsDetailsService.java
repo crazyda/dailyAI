@@ -1,0 +1,1 @@
+package com.axp.service.goods;import com.axp.model.ReGoodsDetails;import com.axp.model.ReGoodsOfBase;public interface ReGoodsDetailsService {    /**     * 根据基本商品对象，获取商品详情对象     * @param baseGoods     * @return     */    ReGoodsDetails getByBaseGoods(ReGoodsOfBase baseGoods) throws Exception;}

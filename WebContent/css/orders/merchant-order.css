@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,a,p,span,img,input,textarea,ul,li,ol,dl,dt,dd,h1,h2,h3,h4{ padding:0; margin:0; border:0; list-style:none; outline:none;}
+body{font-size:14px;font-family:"微软雅黑"; color:#333; background:#f3f3f3;}
+table,textarea{ font-family:"微软雅黑";}
+a{ color:#333; text-decoration:none; outline:none;}
+a:hover{ text-decoration:none; color:#333;}
+
+/*--------------tab---------------------*/
+.merchant{ background:#fff;}
+.tab h4{ border-bottom:1px solid #ccc; padding:1.0rem; font-weight:normal;}
+.tab h4 span{ background:#ccc; font-size:1.0rem; line-height:2.4rem; width:8%; border-radius:3px; display:inline-block; text-align:center; margin-right:0.5%; cursor:pointer;}
+.tab h4 span.current{ background:#0e93d8; color:#fff;}
+.tab ul li{ display:none;}
+.tab ul li.current{ display:block;}
+
+.orderform{ width:100%; overflow:hidden; padding:1.0rem; padding-right:10%; box-sizing:border-box;}
+.orderform p{ float:left; width:33%; height:2.0rem; font-size:1.0rem; line-height:2.0rem; padding:0.5rem 0;}
+.orderform p input{ width:60%; border:1px solid #ccc; border-radius:2px; font-size:1.0rem; line-height:1.5rem; padding-left:0.5rem;}
+.orderform p select{ width:60%; border:1px solid #ccc;}
+.orderform .btn{ width:100%; padding-left:6%;}
+.orderform .btn input{ font-size:1.0rem; border:1px solid #ccc; border-radius:3px; width:8%; line-height:2.5rem; background:#fff; margin-right:1%; text-align:center; padding-left:0; cursor:pointer;}
+.orderform .btn input.click{ background:#10a6e1; color:#fff; border:0;}
+
+/*--------------table---------------------*/
+.table{ padding-bottom:5%;}
+.table table{ width:100%; border-spacing:0; border-collapse:collapse; margin-bottom:3.0rem;}
+.table thead{ background:#2d84b9; width:100%;}
+.table thead tr th{ border:1px solid #fff; text-align:center; font-size:0.9rem; line-height:3.0rem; color:#fff;}
+.table tbody tr.order_time{ background:#efefef;}
+tr.order_time p{ font-size:0.9rem; line-height:2.6rem; padding-left:1.5rem;}
+tr.order_time p .order{ margin-right:3.0rem;}
+.table tbody tr.default td{ border-bottom:1px solid #ccc; text-align:center; border-right:1px solid #efefef;}
+.table .default td dl{ width:20.0rem; overflow:hidden; margin:0 auto; padding-left:1.5rem;}
+.table .default td dl dt{ width:5.0rem; height:5.0rem; float:left; padding:0.5rem 0;}
+.table .default td dl dd{ float:left; text-align:left; padding-left:1.0rem; line-height:1.0rem; font-size:0.9rem; padding-top:1.0rem;}
+.table .default td dl dd p{ margin-bottom:1.5rem;}
+.table .default td dl dd span{ color:#999;}
+.table .default td dl dd span i{ color:#ff2d48; font-style:normal;}
+
+.table .default td .assess{ width:70%; text-align:left; padding-top:0.5rem; padding-left:1.0rem; font-size:0.9rem; margin-bottom:0.5rem;}
+.table .default td .img img{ margin:0 0.1rem;}
+
+
+.table .default td.red{ color:#ff2d48;}
+.table .default td.gray{ color:#999;}
+.table .default td a{ color:#10a6e1;}
+/*-----------------pagenum----------------------*/
+.page_num{ overflow:hidden;}
+.page_num .left{ float:left; width:30%; text-align:center;}
+.page_num .left .btn{ font-size:0.9rem; line-height:2.0rem; padding:0 1.0rem; background:#10a6e1; color:#fff; border-radius:3px; margin-left:1.0rem; cursor:pointer;}
+.page_num .sabrosus{ float:left; width:40%;}
+
+.sabrosus{ padding:0.5rem; text-align:center; margin:0.5rem;}
+.sabrosus a{ border:1px solid #ccc; width:1.5rem; height:1.5rem; text-decoration:none; color:#333; margin:0 0.3rem; display:inline-block; text-align:center; line-height:1.5rem;}
+.sabrosus a:hover{ border:1px solid #ff2d48; color:#000;}
+.sabrosus a:active{ border:1px solid #ff2d48; color:#000;}
+.sabrosus span{ width:1.5rem; height:1.5rem; text-align:center; line-height:1.5rem; display:inline-block; margin:0 0.3rem;}
+.sabrosus span.current{ color:#fff; font-weight:bold; background:#ff2d48; border:1px solid #ff2d48;}
+.sabrosus span.disabled{ border:1px solid #929292; color:#000; font-weight:bold; color:#929292;}
+
+.page_only .sabrosus{ width:100%; text-align:center;}
+
+/*---------------回复评价----------------------*/
+.reply_table{ position:relative;}
+.reply{ width:30%; position:absolute; top:25%; left:30%; padding:2.0rem; background:#fff; box-shadow:0 0 5px #000; display:none;}
+.reply dl{ width:100%; overflow:hidden;}
+.reply dl dt{ float:left;}
+.reply dl dd{ float:left; width:80%;}
+.reply dd textarea{ border:1px solid #ccc; resize:none; font-size:0.9rem; padding:0.5rem; width:100%; height:6.0rem;}
+.reply .btn{ width:100%; padding-top:2.0rem;}
+.reply .btn input{ color:#fff; font-size:0.9rem; line-height:2.0rem; width:20%; background:#10a6e1; border-radius:3px; display:block; margin:0 auto; cursor:pointer;}
+.reply dd p{ text-align:right; color:#999; font-size:0.9rem;}
+.reply dd p input{ text-align:center; width:auto; color:#999;}
+
+
+
+
+
+
+
+

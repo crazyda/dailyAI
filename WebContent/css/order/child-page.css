@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{font-size:14px;font-family:"微软雅黑"; color:#333; background:#fff;border-radius:20px; margin:0 auto; }
+table,textarea{ font-family:"微软雅黑";}
+a{ color:#333; text-decoration:none; outline:none;}
+a:hover{ text-decoration:none; color:#333;}
+
+/*------------待兑换页面内容exchange------------------*/
+.section01 p{ font-size:1.0rem; line-height:3.0rem; border-bottom:1px solid #ccc; padding-left:1.0rem;}
+.section01 p.red{ color:#ff2e44;}
+.section01 p .order{ margin-right:5%;}
+
+.section02{ border-bottom:1px solid #ccc; padding:0 2.0rem;}
+.section02 ul{ border-bottom:1px solid #ccc; overflow:hidden;}
+.section02 ul li{ float:left; width:25%; font-size:1.0rem; line-height:3.0rem;}
+.section02 ul li.address{ width:100%;}
+
+.table{ width:100%; padding:2% 1%;}
+.table table{ width:95%; border-spacing:0; border-collapse:collapse;}
+.table thead{ background:#2d84b9; width:100%;}
+.table thead tr th{ border:1px solid #fff; text-align:center; font-size:0.9rem; line-height:3.0rem; color:#fff;}
+.table tbody{ border-left:1px solid #ccc;}
+.table tbody tr td{ border-bottom:1px solid #ccc; text-align:center; border-right:1px solid #ccc;}
+.table table td dl{ width:20.0rem; overflow:hidden; margin:0 auto; padding-left:1.5rem;}
+.table table td dl dt{ width:5.0rem; height:5.0rem; float:left; padding:0.5rem 0;}
+.table table td dl dd{ float:left; text-align:left; padding-left:1.0rem; line-height:1.0rem; font-size:0.9rem; padding-top:1.0rem;}
+.table table td dl dd p{ margin-bottom:1.5rem;}
+.table table td.red{ color:#ff2d48;}
+
+
+.section03 p{ font-size:1.0rem; line-height:3.0rem; padding-left:3%; border-bottom:1px solid #ccc; color:#ff2e44;}
+.section03 p input{ border:1px solid #ccc; font-size:1.0rem; line-height:1.8rem; padding-left:0.5rem; width:15%;}
+.section03 p a{ color:#0101fe;}
+.section03 .btn{ padding-top:10%;}
+.section03 .btn input{ background:#0e93d8; color:#fff; font-size:1.1rem; line-height:3.5rem; width:12%; border-radius:5px; margin:0 auto; display:block; cursor:pointer;}
+
+/*------------待发货页面内容to-ship --同上------------------*/
+/*------------订单详情-待确认confirm --同上------------------*/
+/*------------订单详情-待收货inbound --同上------------------*/
+/*------------订单详情-交易已完成completed --同上------------------*/
+
+
+
+/*------------退单售后-审核详情check-detail / 已评价evaluated------------------*/
+.table table td.gray{ color:#999;}
+
+.back_reason{ width:100%; border-bottom:1px solid #ccc; overflow:hidden; padding:1% 0;}
+.back_reason .left{ float:left; width:10%; text-align:right; font-size:1.0rem; line-height:2.0rem;}
+.back_reason .right{ width:90%; float:left;}
+.back_reason .right p{ color:#333; border-bottom:0;}
+.back_reason .right p.text{ font-size:0.9rem; line-height:1.2rem; width:60%; margin-bottom:1%; height:2.4rem; overflow:hidden;}
+.back_reason .right p.img{ line-height:normal;}
+.back_reason .right p.img img{ display:inline-block; margin-right:1%;}
+
+.check_reason .reason_con{ width:100%; overflow:hidden; padding:5% 0;}
+.reason_con .left{ width:10%; float:left; text-align:right; font-size:1.0rem; line-height:2.0rem;}
+.reason_con .right{ width:90%; float:left; padding-left:2%; box-sizing:border-box;}
+.reason_con .right textarea{ border:1px solid #ccc; width:80%; height:6.0rem; padding:1%; font-size:0.9rem; resize:none;}
+.reason_btn{ width:60%; margin:0 auto; text-align:center;}
+.reason_btn input{ color:#fff; font-size:1.0rem; line-height:3.0rem; background:#0e93d8; width:20%; border-radius:3px; cursor:pointer; margin:0 5%; margin-bottom:30%;}
+
+.star{ border-bottom:1px solid #ccc; font-size:1.0rem; line-height:3.0rem; padding-left:1.0rem; color:#ff2e44; height:3.0rem;}
+.star img{ margin-top:0.5rem;}
+
+/*------------物流信息logistics------------------*/
+.log_con{ border-bottom:1px solid #ccc; padding:1.0rem 0; padding-left:2.0rem;}
+.log_con ul{ width:45%; overflow:hidden;}
+.log_con ul li{ width:50%; float:left; font-size:1.0rem; line-height:2.5rem;}
+.log_con li.address_fa{ width:100%; overflow:hidden;}
+.log_con li.address_shou{ width:100%; overflow:hidden;}
+.log_con li span.left{ float:left;}
+.log_con li span.right{ float:left; width:80%; line-height:2.5rem;}
+
+/*--------物流-----------*/
+.package-status {
+	padding:1.5rem 2.0rem;
+	border-bottom:1px solid #CCCCCC;
+	padding-bottom:0.5rem;
+}
+.package-status .status-list {
+	margin:0;
+	padding:0;
+	margin-left:12px;
+	margin-top:-9px;
+	list-style:none;
+	font-size:1.0rem;
+}
+.package-status .status-list li {
+	height:30px;
+	border-left:2px solid #ccc
+}
+.package-status .status-list li:before {
+	content:'';
+	border:3px solid #f3f3f3;
+	background-color:#ccc;
+	display:inline-block;
+	width:0.8rem;
+	height:0.8rem;
+	border-radius:50%;
+	margin-left:-0.6rem;
+	margin-right:1.0rem;
+}
+.package-status .status-list .date {
+	font-weight:700;
+	margin-right:8px;
+	font-family:Arial
+}
+.package-status .status-list .time {
+	margin-right:28px;
+	margin-left:5px
+}
+.package-status .status-list .week {
+	font-weight:700
+}
+.package-status .status-list .latest:before {
+	background-color:#fea43f;
+	border-color:#f8e9e4
+}
+.package-status .status-list em {
+	color:#ff4207
+}
+.package-status .status-list .hidden {
+	display:inline
+}
+.package-status .status-box {
+	overflow:hidden
+}
+.package-status .status-action {
+	text-align:right;
+	color:#ff4200;
+	padding-right:10px
+}
+.package-status .status-action .action-handler {
+	cursor:pointer
+}
+.package-status .status-info {
+	margin-top:-10px;
+	margin-left:22px;
+	margin-right:10px;
+	background-color:#f3f3f3;
+	overflow:hidden;
+	line-height:28px;
+	color:#959595;
+	text-align:right
+}
+.package-status .status-info .info-inner {
+	margin-top:20px;
+	margin-left:18px;
+	border-top:1px solid #e8e8e8;
+	height:28px
+}
+.package-status .status-list em.normal {
+	font-weight:400
+}
+.package-status .status-list .text {
+	display:inline-block;
+	width:653px;
+	vertical-align:text-top;
+	line-height:1.3em
+}
+.package-status .status-list li {
+	height:auto;
+	min-height:3.0rem;
+}
+.package-status .status-list .date {
+	width:62px
+}
+.package-status .status-list .week {
+	width:24px
+}
+.package-status .status-list .time {
+	width:48px
+}
+.package-status .status-list {
+	margin-top:-8px
+}
+.package-status .status-list .text {
+	width:635px
+}
+.package-status .status-list .date,.package-status .status-list .week,.package-status .status-list .time {
+	display:inline-block
+}
+.package-status .status-list .week {
+	width:32px
+}
+.package-status .status-list .date {
+	width:78px
+}
+.package-status .status-box {
+	position:relative
+}
+.package-status .status-box:before {
+	content:" ";
+	background-color:red;
+	display:block;
+	position:absolute;
+	top:-2px;
+	left:20px;
+	width:0;
+	height:4px;
+}
+.package-status .status-info {
+	position:relative;
+	z-index:10
+}
+.package-status .status-list {
+	margin-top:0
+}
+.package-status .status-info {
+	background:0 0
+}
+.package-status .status-list .latest {
+	border:none
+}
+/*--------物流商品-----------*/
+.goods{ padding:1.0rem; padding-left:2.0rem;}
+.goods dl{ overflow:hidden; height:7.0rem;}
+.goods dl dt{ float:left; width:7.0rem; height:7.0rem;}
+.goods dl dd{ float:left; padding-left:1.0rem;}
+.goods dl dd p.name{ font-size:1.0rem; line-height:3.5rem; margin-bottom:1.0rem;}
+.goods dl dd p.format{ font-size:0.9rem; line-height:1.0rem; color:#7f7f7f;}
+.goods dd .format span{ color:#ff2e44;}
+.goods dd .format i{ font-style:normal; margin-left:2.0rem; color:#333;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

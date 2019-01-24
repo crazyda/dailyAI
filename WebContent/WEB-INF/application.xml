@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:task="http://www.springframework.org/schema/task" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+			http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:annotation-config/>
+    <!-- 测试用 -->
+    <!-- <bean id="date" class="java.util.Date"></bean> -->
+
+    <!-- 开启注解扫描 (已经在mvc中开启了,仅在测试spring+jpa时使用) -->
+    <context:component-scan base-package="com.axp"/>
+
+    <!-- 引入外部文件,关于数据库的配置信息 -->
+    <context:property-placeholder location="classpath:db.properties"/>
+
+    <!-- 查询业务类 -->
+    <bean id="dateBaseDAO" class="com.axp.dao.DateBaseDAO"></bean>
+    <bean id="toolSpring" class="com.axp.util.ToolSpring"></bean>
+
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${db.driverClassName}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+
+        <!-- 配置初始化大小、最小、最大-->
+        <property name="initialSize" value="10" />
+        <property name="minIdle" value="10" />
+        <property name="maxActive" value="100" /> 
+
+        <!-- 配置获取连接等待超时的时间-->
+        <property name="maxWait" value="60000" /> 
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        <property name="timeBetweenEvictionRunsMillis" value="8000000" /> -->
+
+        <property name="validationQuery" value="SELECT 'x'"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+
+        <!-- 配置监控统计拦截的filters，去掉后监控界面sql无法统计 -->
+        <property name="filters" value="stat"/>
+    </bean>
+
+    <!-- 配置sessionFactory -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <!-- 配置连接信息 -->
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 配置映射文件 配置的是hbm.xml文件所在的目录地址,spring会自动的扫描这些目录,把所有的hbm.xml文件自动映入 -->
+        <property name="mappingDirectoryLocations" value="classpath:com/axp/model"/>
+    </bean>
+
+    <!-- 配置事务管理器 -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+	<!-- 事务模板 -->
+	<tx:advice id="advice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="list*" read-only="true" />
+			<tx:method name="query*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="check*" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+    <!-- aop相关配置 -->
+    <aop:config>
+        <aop:pointcut expression="execution(* com.axp.service..*.*(..))"
+                      id="pointCut"/>
+        <aop:advisor advice-ref="advice" pointcut-ref="pointCut"/>
+    </aop:config>
+
+    <!-- 配置定时任务 -->
+    <!-- <task:scheduled-tasks>
+        <task:scheduled ref="TaskJob" method="doTask" cron="0 0/5 * * * ?" />
+    </task:scheduled-tasks> -->
+
+    <!-- 配置aop日志 --><!-- 暂时不做 -->
+    <!--<aop:config> <aop:pointcut expression="execution(* com.axp.service.impl..*(..))"
+        id="logPointCut" /> <aop:aspect ref="LogUtil"> <aop:before method="log" pointcut-ref="logPointCut"
+        /> </aop:aspect> </aop:config> -->
+
+
+</beans>

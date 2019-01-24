@@ -1,0 +1,1 @@
+alter table new_red_paper_setting add zoneId INT(11) COMMENT '城市Id';

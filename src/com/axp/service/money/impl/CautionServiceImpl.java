@@ -1,0 +1,1 @@
+package com.axp.service.money.impl;import org.springframework.stereotype.Service;import com.axp.service.money.CautionService;import com.axp.service.system.impl.BaseServiceImpl;@Servicepublic class CautionServiceImpl extends BaseServiceImpl implements CautionService {}

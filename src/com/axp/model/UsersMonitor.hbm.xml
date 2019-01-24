@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.axp.model.UsersMonitor" table="users_monitor">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <many-to-one name="user" class="com.axp.model.Users" fetch="select" >
+            <column name="user_id">
+                <comment>粉丝Id</comment>
+            </column>
+        </many-to-one>
+        <property name="createTime" type="java.sql.Timestamp">
+            <column name="createTime" length="19">
+                <comment>创建时间</comment>
+            </column>
+        </property>
+        <property name="isValid" type="java.lang.Boolean">
+            <column name="isValid" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <property name="pwd" type="java.lang.String">
+            <column name="pwd" />
+        </property>
+    </class>
+</hibernate-mapping>

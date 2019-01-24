@@ -1,0 +1,7 @@
+ form div  input{padding:5px;border:1px solid #ccc;border-radius:5px}
+ div.div_search div{float: left;}
+ div.div_search div.phone{padding-left:8px}
+ div.div_search div.start ,  div.div_search div.end , div.div_search div.serech{padding-left:60px}
+ div.div_search div.name{padding-left:10px}
+ div.div_search div.mix ,  div.div_search div.max , div.div_search div.serech{padding-left:60px}
+ div.div_search div.count {padding-left: 550px}

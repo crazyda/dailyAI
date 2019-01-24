@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.axp.model.PartnerInform" table="partner_inform" >
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        
+        <many-to-one name="users" class="com.axp.model.Users" fetch="select">
+        	<column name="usersId"></column>
+        </many-to-one>
+        
+         <many-to-one name="causeUsers" class="com.axp.model.Users" fetch="select">
+        	<column name="causeUsersId"></column>
+        </many-to-one>
+        
+        <property name="remark" type="java.lang.String">
+            <column name="remark" />
+        </property>
+        <property name="isValid" type="java.lang.Boolean">
+            <column name="isValid" />
+        </property>
+        <property name="createtime" type="java.sql.Timestamp">
+            <column name="createtime" length="19" />
+        </property>
+        
+        <property name="level" type="java.lang.Integer">
+            <column name="level" />
+        </property>
+        
+          <property name="mode" type="java.lang.Integer">
+            <column name="mode" />
+        </property>
+    </class>
+</hibernate-mapping>

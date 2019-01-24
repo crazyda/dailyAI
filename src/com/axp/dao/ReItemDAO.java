@@ -1,0 +1,1 @@
+package com.axp.dao;import java.util.List;import java.util.Set;import com.axp.model.ReItem;public interface ReItemDAO extends IBaseDao<ReItem> {    /**     * 获取所有的菜单；     *     * @return     */    List<ReItem> getAllItems();	Set<ReItem> getItemsByIds(List<Integer> ids);}

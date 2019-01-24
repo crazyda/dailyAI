@@ -1,0 +1,144 @@
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	
+}
+/*字体样式*/
+
+.fontstyle1{
+
+	font-weight: bolder;
+	line-height: 20px;
+}
+
+.fontstyle2{
+	line-height: 20px;
+	font-family:"YouYuan";
+}
+.fontstyle3{
+	font-size: 20px;
+	font-family:"YouYuan";
+	border-radius: 5px;
+	background: #ae316f;
+	padding: 10px;
+	color:#fff;
+}
+
+.fontstyle4{
+	font-size: 10px;
+	font-weight: bolder;
+	margin-top:10px;
+
+}
+
+.fontstyle5{
+	color:#f58108;
+	font-size: 14px;
+	font-weight: bolder;
+
+
+}
+/*头部banner*/
+#head{
+	margin: 0 auto;
+	width: 100%;
+	height: 49%;
+
+}
+
+#head img{
+	width: 100%;
+	height: 100%;
+}
+/*中间*/
+#main{
+	margin: 0 auto;
+	background:#ff0;
+
+}
+
+.containt{
+	margin: 0 auto;
+	height: 29%;
+	text-align: center;
+	color:#707070;
+}
+
+.download{
+	margin:10px auto 0 auto;
+	width: 80%;
+	
+}
+
+
+.foot{
+
+	width: 100%;
+	height: 21%;
+	background-image:url("../images/bottom.jpg");
+	background-size: 100% 100%;
+	
+}
+.foot .detail{
+	width: 90%;
+	margin: 0 auto;
+	line-height: 20px;
+	color:#BDBDBD;
+	position:relative;
+	top:10%;
+}
+
+
+.more{
+	margin-top:5px;
+	text-align: right;
+
+}
+
+.more a{
+	position:relative;
+	top: 40px;
+	color:#eea72e;
+}
+
+.more span{
+	position:relative;
+	top: 40px;
+	color:#DADADA;
+}
+
+.rg{
+	width: 95%;
+	height: 20px;
+	margin: 20px auto 40px auto;
+}
+.right{
+
+	float: left;
+	text-align: center;
+	border-radius: 5px;
+	width: 40%;
+	height: 20px;
+	margin: 0 5%;
+	padding: 5px 0;
+	font-size: 14px;
+	color:#ae316f;
+	background-color: #fdd7e3;
+
+}
+
+.left{
+	float: left;
+	text-align: center;
+	border-radius: 5px;
+	width: 40%;
+	height: 20px;
+	margin: 0 5%;
+	padding: 5px 0;
+	font-size: 14px;
+	color:#ae316f;
+	background-color: #fdd7e3;
+}
+
+

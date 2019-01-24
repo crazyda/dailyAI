@@ -1,0 +1,1 @@
+package com.axp.dao;import com.axp.model.SystemConfig;public interface SystemConfigDAO extends IBaseDao<SystemConfig> {    /**     * 根据paramter获取对象；     *     * @param parameter parameter名称；     * @return     */    SystemConfig getConfigByParameter(String parameter);}

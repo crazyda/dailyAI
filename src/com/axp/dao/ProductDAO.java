@@ -1,0 +1,1 @@
+package com.axp.dao;import com.axp.model.Product;public interface ProductDAO extends IBaseDao<Product> {}

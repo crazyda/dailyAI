@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+a,img,span,ul,li,ol,dt,dl,dd,textarea,body,input,p,div,h1,h2,h3,h4{ margin:0; padding:0; border:0; list-style:none;}
+body{ font-size:18px; color:#333; font-family:"微软雅黑"; background:#eee;}
+a{ text-decoration:none; color:#333;}
+a:hover{ text-decoration:none; color:#333;}
+
+/*---------head-----------*/
+.head{ width:100%; background:#48b7d5; height:60px; line-height:60px; padding:0 10px; box-sizing:border-box; overflow:hidden;}
+.head .a1{ background:url(../images/head01.png) no-repeat left 5px; padding-left:20px; background-size:20px; color:#fff;}
+.head .a2{ float:right; background:url(../images/head02.png) no-repeat center center; background-size:50%;}
+.head .a3{ float:right; background:url(../images/head03.png) no-repeat center center; background-size:50%;}
+
+p{ width:100%; padding:5%; box-sizing:border-box; font-size:14px;}
+
+
+
+/*-----主菜单---------------------------*/
+.menu{ width:100%; background:#fff; border-top:2px solid #cbcbcb; padding-top:2%; position:fixed; left:0; bottom:0;}
+.menu li{ float:left; width:25%; text-align:center;}
+.menu li a{color:#919191;}
+.menu li:nth-child(1) a{ color:#49b8d6;}
+

@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,a,p,span,img,input,textarea,ul,li,ol,dl,dt,dd,h1,h2,h3,h4{ padding:0; margin:0; border:0; list-style:none; outline:none;}
+body{font-size:14px;font-family:"微软雅黑"; color:#333; background:#f3f3f3;}
+a{ color:#333; text-decoration:none; outline:none;}
+a:hover{ text-decoration:none; color:#333;}
+
+/*------------------投放到商城栏-------------------------------*/
+#manage .setion_all{ width:100%; background:#fff; overflow:hidden; border-bottom:1px solid #d1d1d1;}
+.setion_all .left{ float:left; width:15%; text-align:center; border-right:1px solid #d1d1d1; box-sizing:border-box; font-size:1.2rem; line-height:4.0rem;}
+.setion_all .right{ float:left; width:85%;}
+.setion_all .left{ line-height:10.0rem;}
+.setion_all .right p{ font-size:0.9rem; line-height:3.0rem; padding-left:2.0rem; color:#999;}
+.setion_all .right .chek{ padding-left:1.0rem;}
+.setion_all .chek ul{ width:55%; overflow:auto; padding:0.5rem 0;}
+.setion_all .chek ul li{ width:25%; float:left; margin:0.5rem 0; font-size:0.9rem;}
+
+#manage .tab h4{ width:100%; overflow:hidden; padding:1.0rem 0;}
+.tab h4 span{ padding:0.8rem 4.0rem; text-align:center; margin-right:0.5%; color:#333; font-size:0.9rem; line-height:2.6rem; background:#cccccc; border-radius:3px; display:inline-block; cursor:pointer;}
+.tab h4 span.current{ color:#fff; background:#0e93d8;}
+
+.tab .tab_con li{ display:none;}
+.tab .tab_con li.current{ display:block;}
+/*----------商家商城模块-----------------*/
+.default{ background:#fff; border-bottom:1px solid #d1d1d1; border-top:1px solid #d1d1d1;}
+.default_con{ width:100%; overflow:hidden; border-bottom:1px solid #d1d1d1;}
+.default_con .title{ width:12%; float:left; border-right:1px solid #d1d1d1; box-sizing:border-box; text-align:center; font-size:1.2rem; line-height:25rem;}
+.default_con .list{ width:88%; float:left;}
+.default_con .list dl{ width:100%; overflow:hidden; border-bottom:1px solid #d1d1d1;}
+.default_con .list dl dt{ float:left; width:15%; border-right:1px solid #d1d1d1; box-sizing:border-box; text-align:center; font-size:1.1rem; line-height:3.0rem;}
+.default_con .list dl dd{ width:85%; float:left; padding:0.5rem 1.0rem; box-sizing:border-box;}
+.default_con .list dl dd span{ font-size:1.0rem;}
+.default_con .list dd .txt{ font-size:1.0rem; line-height:1.5rem; border:1px solid #cccccc; width:12%; border-radius:3px; margin-right:1.0rem; text-align:center;}
+
+.default_con .list dd .stock_btn{ font-size:0.9rem; line-height:2.0rem; width:10%; border-radius:3px; margin-right:1.0rem; background:#f39826; color:#fff; cursor:pointer;}
+.default_con .list dd .stock_btn.stock_btn_click{ background:#ccc;}
+
+.default_con .price dd .txt{ margin-right:0;}
+
+.default_con .discount dd p{ margin:1.0rem 0;}
+.default_con .discount dd p select{ width:10%; text-align:center; background:#ececec; border:1px solid #ccc; font-size:0.9rem; line-height:2.0rem; height:2.0rem;}
+.default_con .list .discount dt{ line-height:5.0rem;}
+
+.default_con .list .status dd{ font-size:1.0rem; line-height:3.0rem; padding:0 1.0rem;}
+
+.default_con .list .dely_way dt{ line-height:4.3rem;}
+.default_con .list .dely_way dd{ padding:1.0rem; padding-top:1.4rem;}
+.default_con .list .dely_way dd span{ margin-right:10%;}
+.default_con .list .dely_way dd .txt{ width:8%; margin-right:0; background:#ececec;}
+
+.default_con .list .time dd select{ width:10%; text-align:center; background:#ececec; border:1px solid #ccc; font-size:0.9rem; line-height:3.0rem; margin-right:1%; height:2.0rem;}
+.default_con .list .shelf_time{ border-bottom:0;}
+/*---------操作------------*/
+.default .operate{ width:100%; overflow:hidden;}
+.default .operate .title{ width:12%; float:left; border-right:1px solid #d1d1d1; box-sizing:border-box; text-align:center; font-size:1.2rem; line-height:4.5rem;}
+.default .operate .op_btn{ width:88%; float:left; padding:1.0rem 0; padding-left:26%; box-sizing:border-box;}
+.default .operate .op_btn input{ font-size:0.9rem; line-height:2.5rem; background:#cccccc; color:#fff; width:16%; border-radius:3px; margin-right:5%; cursor:pointer;}
+.default .operate .op_btn input.click{ background:#0e93d8;}
+
+/*----------积分兑换模块-----------------*/
+.redeem_con .list .shelf_time{ border-bottom:1px solid #d1d1d1;}
+.redeem_con .list .notice{ border-bottom:0;}
+.redeem_con .list .notice dt{ line-height:8.0rem;}
+.redeem_con .list .notice dd{ padding:1.0rem; box-sizing:border-box;}
+.redeem_con .list .notice dd textarea{ border:1px solid #cdcdcd; width:50%; height:6.0rem; resize:none; padding:0.5rem; box-sizing:border-box; overflow-y:scroll; overflow-x:hidden; font-size:0.9rem;}
+.redeem_con .title{ line-height:33.7rem;}
+
+/*----------秒杀Spike模块-----------------*/
+.spike_con .stock dd .next_sp{ font-size:0.9rem; line-height:2.0rem; background:#0e93d8; color:#fff; float:right; border-radius:3px; padding:0 2.0rem; cursor:pointer;}
+.spike_con .list .shelf_time{ border-bottom:1px solid #d1d1d1;}
+.spike_con .list .notice{ border-bottom:0;}
+.spike_con .list .notice dt{ line-height:8.0rem;}
+.spike_con .list .notice dd{ padding:1.0rem; box-sizing:border-box;}
+.spike_con .list .notice dd textarea{ border:1px solid #cdcdcd; width:50%; height:6.0rem; resize:none; padding:0.5rem; box-sizing:border-box; overflow-y:scroll; overflow-x:hidden; font-size:0.9rem;}
+.spike_con .title{ line-height:33.7rem;}
+
+/*----------久久特惠模块(同各地特产)-----------------*/
+.deals_con .list .shelf_time{ border-bottom:1px solid #d1d1d1;}
+.deals_con .list .package{ border-bottom:0;}
+.deals_con .list .place dd select{ width:15%;}
+.deals_con .list .package dd select{ width:15%;}
+.deals_con .title{ line-height:29rem;}
+
+/*----------会员免单区模块-----------------*/
+.free_con .list .shelf_time{border-bottom:1px solid #d1d1d1;}
+.free_con .list .package{ border-bottom:0;}
+.free_con .title{ line-height:24rem;}
+.free_con .list .place dd select{ width:15%;}
+.free_con .list .package dd select{ width:15%;}
+
+/*----------底部库存按钮-----------------*/
+.final_select{ padding:5% 0;}
+.final_in{ width:60%; margin:0 auto;}
+.final_in .stock{ font-size:0.9rem;}
+.final_in .stock input{ font-size:0.9rem; line-height:1.5rem; background:#fff; border:1px solid #ccc; border-radius:3px;}
+.final_in .btn{ margin-top:3%;}
+.final_in .btn input{ width:26%; font-size:1.0rem; line-height:3.0rem; background:#cccccc; margin-right:5%; border-radius:3px; color:#fff; cursor:pointer;}
+.final_in .btn input.sub{ margin-right:0;}
+.final_in .btn input.click{ background:#0e93d8;}
+
+/*---------------库存form表---------------------*/
+.tab_con .default{ position:relative; overflow:auto;}
+.tab_con .default .stock_form{ position:absolute; top:10%; left:20%; background:#fff; box-shadow:0 0 10px; border-radius:5px; width:50%; display:none;}
+.tab_con .default.free .stock_form{ top:14%;}
+.tab_con .default.indpdt_mall .stock_form{ top:12%;}
+
+
+
+.stock_form table{ border-spacing:0; border-collapse:collapse;}
+.stock_form div{ width:85%; float:left; padding:0.5rem 1.0rem; box-sizing:border-box;}
+.stock_form .checkArea { width:100%; float:left; padding:0.5rem 1.0rem; box-sizing:border-box;text-align:left; font-size:0.9rem;}
+.stock_form .checkArea input { margin-right:5px;}
+.stock_form .selectArea { width:100%; float:left; padding:0.5rem 1.0rem; box-sizing:border-box;}
+.stock_form .selectArea .btn{ font-size:0.8rem; line-height:1.5rem; color:#fff; vertical-align:middle; background:#bec2c5; width:50px; display:inline-block; border-radius:3px; cursor:pointer;}
+.stock_form .tableArea { width:100%; float:left; padding:0.5rem 1.0rem; box-sizing:border-box;}
+.stock_form table tbody{ border-left:1px solid #d9d9d9; }
+.stock_form table tr th{ text-align:center; font-size:1.0rem; line-height:2.5rem; color:#333; border-bottom:1px solid #d9d9d9; width:8%;}
+.stock_form table tr th:nth-last-child(1){ width:5%;}
+.stock_form table tr td{ text-align:center; font-size:1.0rem; line-height:3.0rem; color:#333; border-bottom:1px solid #d9d9d9; border-right:1px solid #d9d9d9;}
+.stock_form table tr td .text{ background:#dadada; text-align:center; border-radius:3px; font-size:1.0rem; line-height:2.0rem; width:70%;}
+.stock_form table tr td .del{ color:#0e93d8;}
+
+.stock_form .btm{ width:100%; padding:5% 0;}
+.stock_form .btm .btm_in{ width:30%; margin:0 auto;}
+.stock_form .btm_in input{ font-size:0.9rem; line-height:2.5rem; color:#fff; background:#bec2c5; width:45%; display:inline-block; border-radius:3px; cursor:pointer; margin:0 2%;}
+.stock_form .btm_in input.click{ background:#0e93d8;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tab h4 span{ display:none; float:left;}
+.tab h4 span.show{display:block;}
+.tab .tab_con li.current{display:block;}

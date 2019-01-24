@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*css reset*/
+*{ margin:0; padding:0; font-family:"微软雅黑"}
+img{ border:none;}
+a{ text-decoration:none;}
+
+body{ background:url(../images_new/denglubeijing.png.jpg) no-repeat; background-size:cover; width:100%; height:100%;}
+.container{ width:430px; margin:auto; height:524px; margin-top:100px;}
+.logo{ width:390px; margin:0 auto 25px auto;}
+.text{ width:406px; margin-left:auto; margin-right:auto;}
+.account,.password{ display:block; width:316px; height:16px; margin:auto; border-radius:50px; border:1px solid #0198df; padding:15px 30px; font-size:16px; padding-right:40px;}
+.account{ margin-top:50px; margin-bottom:30px; background:url(../images_new/account_bg.png) no-repeat 345px center;}
+.password{ background:url(../images_new/password_bg.png) no-repeat 345px center;}
+.typelist span input{ display:none;}
+.typelist { position:relative; margin-top:25px; margin-bottom:25px;}
+.typelist span b{ width:22px; height:22px; background:url(../images_new/checkbox.png) no-repeat left center; display:block; position:absolute; left:40px;}
+.typelist label{ padding-left:70px;}
+.typelist span{ display:inline-block; margin-right:35px;}
+.typelist span,.rember{ color:#414141 !important;}
+.register{ color:#278bc7;}
+.typelist .checked b{ background:url(../images_new/checkbox.gif) no-repeat left center;}
+.login_box{ width:373px; margin:auto;}
+.login_box button{ width:160px; height:48px; border:none; border-radius:50px; background-color:#278bc7; outline:none; cursor:pointer; font-size:30px; color:#fff;text-shadow: 1px 1.732px 0px rgba( 4, 0, 0,0.25);}
+.login_box a{ float:right; line-height:48px; color:#2a89c9; font-size:24px;}/* CSS Document */
+
+.account,.password:focus{outline:none;}
+

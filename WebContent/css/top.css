@@ -1,0 +1,187 @@
+.img_logo{
+
+	background:url(../images/logo_small.png) no-repeat;
+	background-position-y:center;
+	background-position-x:center;
+	background-position: center center;
+	
+}
+
+.img_weixin{
+
+	background:url(../images/weixin.png) no-repeat;
+	background-position-y:center;
+	background-position-x:center;
+	background-position: center center;
+}
+.img_apple{
+
+	background:url(../images/apple.png) no-repeat;
+	background-position-y:bottom;
+	background-position-x:center;
+	background-position: center center;
+}
+.img_android{
+
+	background:url(../images/android.png) no-repeat;
+	background-position-y: center;
+	background-position-x:center;
+	background-position: center center;
+}
+
+.img_yixing{
+
+	background:url(../images/yixing.png) no-repeat;
+	background-position-y: center;
+	background-position-x:center;
+	background-position: center center;
+}
+
+.img_baidu{
+
+	background:url(../images/baidu.png) no-repeat;
+	background-position-y: center;
+	background-position-x:center;
+	background-position: center center;
+}
+
+.top_l{
+   width:20%;
+   height:120px;
+   float:left;
+}
+
+.top_r{
+   width:80%;
+   height:120px;
+   float:left;
+   font-size:12px;
+   font-weight:bold;
+}
+.top_r_1{
+   width:18%;
+   height:100%;
+   float:left;
+   filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+   -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+   opacity:0.5;/*其他，透明度50%*/
+}
+.top_r_2{
+   width:8%;
+   height:100%;
+   float:left;
+   filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+   -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+   opacity:0.5;/*其他，透明度50%*/
+}
+.top_r_3{
+   width:20%;
+   height:100%;
+   float:left;
+   filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+   -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+   opacity:0.5;/*其他，透明度50%*/
+}
+.top_r_4{
+   width:12%;
+   height:100%;
+   float:left;
+   filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+   -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+   opacity:0.5;/*其他，透明度50%*/
+}
+
+.top_r_5{
+   width:25%;
+   height:100%;
+   float:left;
+   filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+   -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+   opacity:0.5;/*其他，透明度50%*/
+   
+}
+
+.top_r_6{
+   height:100%;
+   font-size:10px;
+   color:#007dc3;
+   position:absolute;
+   right:10px;
+   z-index:2;
+   width:200px;
+   text-align:right;
+   
+}
+.top_r_6_t{
+   width:100%;
+   height:40px;
+   line-height:30px;
+}
+.top_r_6_m{
+   width:100%;
+   height:50px;
+   line-height:30px;
+}
+
+.top_r_6_b{
+   width:100%;
+   height:30px;
+}
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body
+{
+    height: 100%;
+}
+body
+{
+    font-size: 14px;
+    line-height: 24px;
+}
+#tip
+{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 0px;
+    width: auto;
+    border: 1px solid #CCCCCC;
+    background-color: #eeeeee;
+    padding: 1px;
+    overflow: hidden;
+    display: none;
+    font-size: 12px;
+    z-index: 10;
+}
+#tip p
+{
+    padding: 6px;
+}
+#tip h1, #detail h1
+{
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #0066CC;
+    color: #FFFFFF;
+    padding: 0px 3px 0px 3px;
+    filter: Alpha(Opacity=100);
+}
+#tip h1 a, #detail h1 a
+{
+    float: right;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.href_class{
+  color:#678f9c;
+  text-decoration:none;
+  cursor:pointer;
+  font-weight:bold;
+}

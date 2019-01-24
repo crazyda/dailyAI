@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+a,img,span,ul,li,ol,dt,dl,dd,textarea,body,input,p,div,h1,h2,h3,h4{ margin:0; padding:0; border:0; list-style:none;}
+body{ font-size:18px; color:#333; font-family:"微软雅黑"; background:#eee;}
+a{ text-decoration:none; color:#333;}
+a:hover{ text-decoration:none; color:#333;}
+
+/*---------head-----------*/
+.head{ width:100%; background:#48b7d5; height:60px; line-height:60px; padding:0 10px; box-sizing:border-box; overflow:hidden;}
+.head .a1{ background:url(../images/head01.png) no-repeat left 5px; padding-left:20px; background-size:20px; color:#fff;}
+.head .a2{ float:right; background:url(../images/head02.png) no-repeat center center; background-size:50%;}
+.head .a3{ float:right; background:url(../images/head03.png) no-repeat center center; background-size:50%;}
+
+/*---------tab-----------*/
+.tab{ width:100%; margin-top:2px;}
+.tab h2{ text-align:center; overflow:hidden;}
+.tab h2 span{width:33.3%; background:#fff; display:inline-block; text-align:center; line-height:40px; cursor:pointer; float:left; font-size:16px; color:#48b7d5;}
+.tab h2 span.current{ background:#fff url(../images/icon04.png) no-repeat center bottom;}
+.tab ul li{ height:200px; display:none; cursor:pointer;}
+.tab ul li.current{ display:block;}
+.tab ul li:nth-child(1){ text-align:center; padding-top:20px; box-sizing:border-box; position:relative;}
+.tab ul li:nth-child(1) .p1{ color:#000; line-height:40px;}
+.tab ul li:nth-child(1) .p1 span{ color:#fb552d;}
+.tab ul li:nth-child(1) h2{ font-size:40px; color:#fe3300; font-weight:normal;}
+.tab ul li:nth-child(1) .p2{ color:#a0a0a0; margin-top:40px;}
+.tab ul li:nth-child(1) a{ position:absolute; right:10px; top:34px; font-size:14px; color:#a1a1a1; background:url(../images/icon05.png) no-repeat left center; padding-left:15px;}
+
+.tab ul li:nth-child(2){ padding:10px; padding-top:20px; box-sizing:border-box;}
+.tab ul li:nth-child(2) div{ overflow:hidden; position:relative;}
+.tab ul li:nth-child(2) div span{ float:left;}
+.tab ul li:nth-child(2) div .left b{ color:#fb552d;}
+.tab ul li:nth-child(2) div .right{ position:absolute; right:0;}
+.tab ul li:nth-child(2) div .right a{ font-size:14px; color:#a1a1a1; background:url(../images/icon05.png) no-repeat left center; padding-left:15px;}
+.tab ul li:nth-child(2) div .center{ position:absolute; left:50%; top:-34%; font-size:30px; margin-left:-38px; color:#ff0000; font-weight:bold;}
+
+.tab ul li:nth-child(2) .con{ width:100%; margin:20px auto; border-top:1px solid #c6c6c6; padding:10px; box-sizing:border-box;}
+.tab ul li:nth-child(2) .con div{ border:1px solid #c6c6c6; background:#fff; width:100%; height:80px; margin-bottom:10px; display:block; padding:5px; box-sizing:border-box;}
+.tab ul li:nth-child(2) .con div img{ float:left;}
+.tab ul li:nth-child(2) .con div .p1{ text-align:left; font-size:14px; color:#666; line-height:20px; margin-left:10px; float:left;}
+.tab ul li:nth-child(2) .con div .p1 span{ font-size:16px; color:#333; line-height:20px;}
+.tab ul li:nth-child(2) .con div .p2{ float:right; height:78px; margin:-5px; border-left:1px solid #c6c6c6; line-height:80px; text-align:center; color:red; padding:0 10px; box-sizing:border-box;}
+
+.tab ul li:nth-child(3){ text-align:center; padding-top:80px; box-sizing:border-box;}
+
+
+
+
+/*-----主菜单---------------------------*/
+.menu{ width:100%; background:#fff; border-top:2px solid #cbcbcb; padding-top:2%; position:fixed; left:0; bottom:0;}
+.menu li{ float:left; width:25%; text-align:center;}
+.menu li a{color:#919191;}
+.menu li:nth-child(2) a{ color:#49b8d6;}

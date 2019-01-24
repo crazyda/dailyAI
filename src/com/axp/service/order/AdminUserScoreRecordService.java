@@ -1,0 +1,1 @@
+package com.axp.service.order;import com.axp.model.AdminUserScoreRecord;import com.axp.query.PageResult;public interface AdminUserScoreRecordService{		}

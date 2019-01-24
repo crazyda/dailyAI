@@ -1,0 +1,1 @@
+package com.axp.service.permission;import java.util.List;public interface RePermissionService {    /**     * 扫定描给定的所有字节码文件，并查找NeedPermission标签，并决定是否要创建权限；     *     * @param clazzes 给定的类的字节码文件；     */    void scanPermissionOrItemAnnotation(List<Class<?>> clazzes) throws Exception;}

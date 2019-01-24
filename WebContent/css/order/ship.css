@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,a,p,span,img,input,textarea,ul,li,ol,dl,dt,dd,h1,h2,h3,h4{ padding:0; margin:0; border:0; list-style:none; outline:none;}
+body{font-size:14px;font-family:"微软雅黑"; color:#333; background:#fff;}
+table{ font-family:"微软雅黑";}
+a{ color:#333; text-decoration:none; outline:none;}
+a:hover{ text-decoration:none; color:#333;}
+
+/*-----------------内容section01-----------------------*/
+.section01 h4{ color:#ff2d48; font-size:1.0rem; line-height:3.0rem; padding-left:1.0rem; border-bottom:1px solid #ccc; font-weight:normal;}
+.section01 .order_time{ font-size:1.0rem; line-height:3.0rem; border-bottom:1px solid #ccc; padding-left:1.0rem;}
+.order_time .order{ margin-right:5%;}
+.section01 .info{ width:100%; overflow:hidden; border-bottom:1px solid #ccc;}
+.info .left{ width:50%; float:left; border-right:1px solid #ccc; box-sizing:border-box; padding:1.0rem;}
+.info .right{ width:50%; float:left; padding:1.0rem; box-sizing:border-box;}
+.info .left dl{ width:100%; overflow:hidden;}
+.info .left dl dt{ float:left; width:7rem; overflow:hidden;}
+.info .left dl dd{ float:left;}
+.info .left dl dd.num{ float:right; line-height:7.0rem; color:#333; padding-right:3.0rem; font-size:1.1rem;}
+.info .left dl dd.name{ line-height:3.5rem; padding-left:1.0rem; font-size:1.0rem;}
+.info .left dl dd.name span{ color:#999;}
+
+.info .right dl{ width:100%; overflow:hidden; font-size:1.0rem; padding:1.0rem 0;}
+.info .right dl dt{ width:25%; float:left; text-align:right;}
+.info .right dl dd{ width:75%; float:left; text-align:left; line-height:1.5rem;}
+.info .right .revise a{ float:right; color:#4241fe; line-height:2.0rem; font-size:1.0rem;}
+
+/*-----------------内容section02-----------------------*/
+.section02 h4{ color:#ff2d48; font-size:1.0rem; line-height:3.0rem; padding-left:1.0rem; border-bottom:1px solid #ccc; font-weight:normal;}
+.section02 p{ font-size:1.0rem; line-height:3.0rem; padding-left:1.0rem; border-bottom:1px solid #ccc;}
+.section02 p a{ float:right; color:#4241fe; padding-right:1.0rem;}
+.section02 p.note{ font-size:0.9rem; line-height:2.5rem; padding-left:2.0rem; border-bottom:1px solid #ccc; background:#f2f2f2; color:#4241fe;}
+/*-----------------内容section03-----------------------*/
+.section03 h4{ color:#ff2d48; font-size:1.0rem; line-height:3.0rem; padding-left:1.0rem; border-bottom:1px solid #ccc; font-weight:normal;}
+.section03 p{ font-size:1.0rem; padding:1.5rem 0; padding-left:3.0rem; border-bottom:1px solid #ccc;}
+.section03 p input{ border:1px solid #ccc; padding-left:0.5rem; font-size:0.9rem; line-height:1.5rem;}
+.section03 p .company{ margin-right:4.0rem;}
+
+.confirm{ text-align:center; padding-top:5%;}
+.confirm input{ color:#fff; font-size:1.0rem; background:#0e93d8; line-height:3.0rem; padding:0 3.0rem; border-radius:3px; cursor:pointer;}
+
+
+
+

@@ -1,0 +1,1 @@
+package com.axp.dao;import com.axp.model.WeiXinBangWechat;public interface WeiXinBangWechatDAO extends IBaseDao<WeiXinBangWechat> {}

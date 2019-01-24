@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.axp.model.Caution" table="caution"  >
+        <id name="cid" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        
+        <property name="phone" type="java.lang.String">
+            <column name="phone"  />
+        </property>
+        <property name="exceedmoney" type="java.lang.Double">
+            <column name="exceedmoney"  />
+        </property>
+        <property name="isvalid" type="java.lang.Boolean">
+            <column name="isvalid" not-null="true" />
+        </property>
+        <property name="createtime" type="java.sql.Timestamp">
+            <column name="createtime" length="19" not-null="true" />
+        </property>
+       
+       <property name="type" type="java.lang.Integer">
+            <column name="type" not-null="true"  />
+        </property>
+        <property name="receiverPhone" type="java.lang.String">
+            <column name="receiverPhone"  />
+        </property>
+    </class>
+</hibernate-mapping>

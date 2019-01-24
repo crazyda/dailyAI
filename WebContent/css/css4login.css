@@ -1,0 +1,50 @@
+body, h1, h2, h3, h4, h5, h6, p,
+blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th,  /* table elements 表格元素 */
+img/* img elements 图片元素 */{
+border:medium none;
+margin: 0;
+padding: 0;
+}
+/** 设置默认字体 **/
+body,button, select, textarea {
+font: 12px/1.5 '宋体',tahoma, Srial, helvetica, sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em{font-style:normal;}
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color:#000;}
+a:hover { text-decoration: underline; color:#3363a7; }
+img{ border:0px;}
+table { border-collapse: collapse; border-spacing: 0; }
+html{padding:0}
+body{width:100%;height:100%;margin:0 auto;text-align:center ;background-image: url(../img/beijing3.png); background-repeat: no-repeat; background-position:center;background-attachment: fixed; background-size:100% 100%;}
+.main{border-radius:10px;background:#f5f5f5;height:360px;width:600px;top:50%;left:50%;margin-top:-180px;margin-left:-300px;position:absolute;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/
+-moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
+-webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/
+box-shadow:2px 2px 10px #909090;/*opera或ie9*/}
+.main-1{position:relative;left:20px;float:left;margin:0 auto;text-align:left;vertical-align:middle;line-height:200%;display:table-cell;height:200px;width:195px;}
+.main-1 p{margin-top:60px;width:220px;font-size:10px;}
+.main-2{float:left;margin:0;padding:0;height:200px;width:400px;}
+.main-2 table{margin:10px 0;padding:0;width:400px;height:180px;}
+.main-2 table tr td input{font-family:Microsoft YaHei;width:270px;border:1px solid #a0c65c;border-radius:4px;height:32px;line-height:26px;color:grey}
+.main-2 table tr td p{font-family:Microsoft YaHei;margin-left:-130px;color:grey;height:32px;line-height:32px;}
+.main-3{float:left;margin:0;padding:0;height:100px;width:600px;}
+/**.tree{background:url(../img/beijing3-tree.png) no-repeat 0 0;z-index:2;}**/
+.tree{height:60px;width:600px;position:relative;text-align:left;margin:0;padding:0; background:url(../img/beijing4.png) no-repeat 50% 30%;background-size:100%;border-top-right-radius:10px;border-top-left-radius:10px;}
+.tree img{height:200px;z-index:2;margin:0;padding:0;position:absolute;bottom:-26px;}
+.denglu{margin-top:10px;margin-left:60px;float:left;height:50px;width:220px;background:#5d8d01;border-radius:10px;}
+.zhuce{margin-top:10px;margin-right:60px;float:right;height:50px;width:220px;background:#f78e07;border-radius:10px;}
+.biaozhi{line-height:60px;height:60px;width:300px;z-index:3;position:absolute;right:0px;bottom:50px;text-align:center;margin:0 auto;}
+.biaozhi p{font-family:Microsoft YaHei;font-weight:600;width:300px;color:#9ec559}
+.trcolor{color:#a0c65c;font-size:15px;font-family:Microsoft Yahei;}
+.main-6{background:#CCC;position:relative;top:30px;left:25px;width:1px;height:40%;margin:0;padding:0;border-right:0px solid #909090;float:left;filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/
+-moz-box-shadow: 1px 1px 10px #909090;/*firefox*/
+-webkit-box-shadow: 1px 1px 10px #909090;/*safari或chrome*/
+box-shadow: 1px 1px 10px #909090;/*opera或ie9*/}
+.inputstyle{padding:0 10px 0 10px;}

@@ -1,0 +1,1 @@
+alter table re_goodsorder add seller_id int(12) COMMENT '店铺ID';

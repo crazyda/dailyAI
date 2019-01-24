@@ -1,0 +1,1 @@
+package com.axp.service.alipay;import java.util.Map;public interface AlipayRefundService {	Map<String, Object> refund(Integer backOrderId);		}

@@ -1,0 +1,49 @@
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #aaa;
+	font-size:	16px;
+	font-family:Microsoft Yahei;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #aaa;
+	font-size:	16px;
+	font-family:Microsoft Yahei;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #aaa;
+	font-size:	16px;
+	font-family:Microsoft Yahei;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #aaa;
+	font-size:	16x;
+	font-family:Microsoft Yahei;
+}
+html,body{height:100%;width:100%;margin:0;padding:0;}
+.main{height:100%;width:100%;margin:0;padding:0;background-image:url(../img/denglubeijing.jpg); background-repeat: no-repeat; background-position:center;background-size:100% 100%;}
+.formcss{width:700px;height:350px;margin:0;padding:0;text-align:center;position:absolute;top:50%;margin-top:-175px;left:50%;margin-left:-350px;}
+.zuo{position:absolute;top:0;left:0;height:100%;width:200px;margin:0;padding:0;background-image:url(../img/axp-wenzi.gif); background-repeat: no-repeat; background-position:center;background-size:100%}
+.zhong{position:absolute;top:5%;left:230px;width:30px;height:90%;border-left:1px solid #ccc;}
+.you{position:absolute;top:10%;left:216px;width:440px;height:80%;}
+.formcss1{height:60px;width:100%;margin:0;padding:0;background-image:url(../img/axp-wenzi2.gif); background-repeat: no-repeat; background-position:center;background-size:80%}
+.form-input{width:98%;height:30px;line-height:30px;border-radius:30px;border:0;text-indent:1em;background-color: transparent;}
+.form-input:focus{outline:none;}
+.form-input:-webkit-autofill { 
+-webkit-box-shadow: 0 0 0px 1000px white inset; 
+border: 0px solid #CCC!important; 
+} 
+.formcss2{height:38px;width:80%;border-radius:19px;padding-top:5px;margin-top:20px;margin-left:50px;background:rgba(255, 255, 255, 0.2)!important;filter:Alpha(opacity=80);}
+.formcss2_1{height:38px;width:70%;border-radius:19px;padding-top:5px;padding-right:50px;margin-top:20px;margin-left:50px;background-image:url(../img/username.gif);background-repeat: no-repeat;background-position:center;background-size:100% 100%;filter:Alpha(opacity=80);}
+.formcss2_2{height:38px;width:70%;border-radius:19px;padding-top:5px;padding-right:50px;margin-top:20px;margin-left:50px;background-image:url(../img/password.gif);background-repeat: no-repeat;background-position:center;background-size:100% 100%;filter:Alpha(opacity=80);}
+.formcss3{margin-top:10px;}
+.formcss4{height:38px;width:80%;margin-left:50px;}
+.formcss4-1{float:left;width:33%;height:100%; font-weight:Microsoft Yahei;}
+.font1{font-size:14px;font-weight:Microsoft Yahei;}
+.formcss4-1 a{font-size:14px;text-decoration:none;color:black}
+.textaling1{text-align:right}
+.textaling2{text-align:left;text-indent:1em;}
+.textaling2 a{color:#c74470}
+.formcss5{height:38px;width:80%;margin-left:50px;margin-top:-10px;line-height:38px;}
+.formcss5-1{width:50%;float:left;text-align:left;}
+.formcss5-2{width:50%;float:right;text-align:right;}
+.formcss5-2 a{color:#c74470;font-size:24px;}
+input[type="submit"]{color:#fff;background:#2d84b9;border:0;border-radius:19px;font-size:24px;width:70%}

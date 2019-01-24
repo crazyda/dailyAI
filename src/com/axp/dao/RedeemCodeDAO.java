@@ -1,0 +1,1 @@
+package com.axp.dao;import com.axp.model.RedeemCode;public interface RedeemCodeDAO extends IBaseDao<RedeemCode> {}

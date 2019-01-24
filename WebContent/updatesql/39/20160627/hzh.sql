@@ -1,0 +1,1 @@
+alter table re_goodsorder add consignmentTime DATETIME COMMENT '发货时间';

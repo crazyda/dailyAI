@@ -1,0 +1,1 @@
+package com.axp.dao;import com.axp.model.AdminUserScoreRecord;import com.axp.query.PageResult;public interface AdminUserScoreRecordDAO extends IBaseDao<AdminUserScoreRecord> {	}

@@ -1,0 +1,1 @@
+alter table re_goodsorder add cashback double(11,2) COMMENT '返现总金额';

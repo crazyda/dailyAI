@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+.container{
+	
+	width: 100%;
+	height: auto;
+}
+.choice{
+	margin-left:7%;
+	width: 90%;
+	height: 100px;
+/* 	text-align: center; */
+	vertical-align: middle;
+	margin-top: 30px;
+	
+}
+.line1{
+	width:50px;
+	height: 90px;
+	float: left;
+	line-height: 90px;
+}
+.line2{
+	 margin-left:-30px; 
+	width:30%;
+	height: 90px;
+	line-height:90px;
+	float: left;
+}
+.line2>select{
+		margin-left:10px;
+		margin-top: 4px;
+}
+
+.user{
+	margin-left:10%;
+	
+	text-align:left;
+	width:80%;
+	height: 70px;
+	line-height: 70px;
+}
+.user span{
+		margin-left:10px;
+		color:red;
+		display: inline-block;
+}
+.desc{
+	width: 80%;
+		margin-left:10%;
+	text-align:left;
+	height: 70px;
+	line-height: 70px;
+	
+}
+.desc input{
+		height:30px;
+		font-size:18px;
+		display:inline-block;
+		margin-left: 20px;
+}
+
+.sub{
+	margin-left:30%;
+	margin-top:30px;
+	width:100px;
+	height: 30px;
+	margin-bottom: 50px;
+}
+.sub input{
+			width:80px;
+			height: 30px;
+			line-height: 30px;
+	
+}

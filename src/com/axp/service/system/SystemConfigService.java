@@ -1,0 +1,1 @@
+package com.axp.service.system;import com.axp.model.SystemConfig;public interface SystemConfigService {    /**     * 根据paramter获取对象；     *     * @param parameter parameter名称；     * @return     */    SystemConfig getConfigByParameter(String parameter);        Integer updateUsersScore();}

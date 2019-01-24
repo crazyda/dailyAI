@@ -1,0 +1,1 @@
+package com.axp.dao;import java.util.List;import com.axp.model.ReGoodsStandard;public interface IReGoodsStandardDao extends IBaseDao<ReGoodsStandard> {	List<ReGoodsStandard> getParentStandardList(Integer adminUserId);	void deleteStandartByParent(Integer id);	}
