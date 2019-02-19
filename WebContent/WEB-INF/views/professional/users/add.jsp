@@ -85,7 +85,7 @@ body {
       <div class="rows">
 			<label>登录名称</label>
 			<span class="input">
-			<input type="hidden" id="id" name ="id" value="${adminUser.id }">
+			<input type="hidden" id="id" name ="adminUserId" value="${adminUser.id }">
 			<input type=text name="loginname" id="loginname" value="${adminUser.loginname }"  onchange="doCheckName(true)" /> <font color="red">*请输入字母或数字组合!密码默认为888888，请及时修改</font>
 			</span>
 			<div class="clear"></div>

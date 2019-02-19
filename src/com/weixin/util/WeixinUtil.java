@@ -428,6 +428,9 @@ public class WeixinUtil{
 	 * @return
 	 */
 	public static String sendXmlWithSSL(String urlStr, String xml) {
+		System.out.println("发送预付信息的xml:"+xml);
+		
+		
 		StringBuffer result = new StringBuffer();
 
 		try{
