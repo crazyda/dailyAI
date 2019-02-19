@@ -107,6 +107,7 @@ public class WeixinRefundServiceImpl extends BaseServiceImpl implements WeixinRe
 					refund.setNonce_str(WeixinWebUtil.getNonceStr(refund));
 					refund.setSign(WeixinWebUtil.getParameterSign(refund));
 					result =WeixinWebUtil.sendXmlWithSSL(WeixinConfig.HTTPS_REFUND_URL, WeixinWebUtil.getXmlStr(refund));
+					System.out.println("goodsorder.getWebType()==1:"+result);
 				}else if(goodsorder.getAdminId()!=null&&goodsorder.getAdminId()>0){
 					
 					List<WeiXinBangWechat> withValidList = weiXinBangWechatDAO.findByPropertyWithValid("adminUser.id", goodsorder.getAdminId());
@@ -131,6 +132,7 @@ public class WeixinRefundServiceImpl extends BaseServiceImpl implements WeixinRe
 						refund.setNonce_str(WeixinUtil.getNonceStr(refund));
 						refund.setSign(WeixinUtil.getParameterSign(refund,wechat.getMchKey()));
 						result =WeixinUtil.sendXmlWithSSL(WeixinConfig.HTTPS_REFUND_URL, WeixinUtil.getXmlStr(refund),filePath,refund.getMch_id());
+						System.out.println("withValidList.size()>0:"+result);
 					}else{
 						statusMap.put("FAIL","退款找不到adminId");
 						result="退款找不到adminId";
@@ -148,6 +150,7 @@ public class WeixinRefundServiceImpl extends BaseServiceImpl implements WeixinRe
 					refund.setNonce_str(WeixinUtil.getNonceStr(refund));
 					refund.setSign(WeixinUtil.getParameterSign(refund));
 					result =WeixinUtil.sendXmlWithSSL(WeixinConfig.HTTPS_REFUND_URL, WeixinUtil.getXmlStr(refund));
+					System.out.println("refund=new RefundParameter();"+result);
 				}
 				
 				//refund.setRefund_account("REFUND_SOURCE_RECHARGE_FUNDS");

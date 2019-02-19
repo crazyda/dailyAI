@@ -8,6 +8,9 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +19,7 @@ import com.axp.dao.AdminUserScoreRecordDAO;
 import com.axp.dao.AdminUserZonesDAO;
 import com.axp.dao.DLScoreMarkDAO;
 import com.axp.dao.DateBaseDAO;
+import com.axp.dao.IBaseDao;
 import com.axp.dao.ProvinceEnumDAO;
 import com.axp.dao.ScoreMarkDAO;
 import com.axp.dao.SellerAccountNumberDAO;
@@ -33,12 +37,15 @@ import com.axp.model.Seller;
 import com.axp.model.SellerAccountNumber;
 import com.axp.model.SellerMainPage;
 import com.axp.model.Shoptypes;
+import com.axp.model.SystemMessageList;
+import com.axp.model.UserSystemMessage;
 import com.axp.model.Users;
 import com.axp.model.Zones;
 import com.axp.service.professional.UserService;
 import com.axp.util.CalcUtil;
 import com.axp.util.DateUtil;
 import com.axp.util.QueryModel;
+import com.axp.util.ToolSpring;
 import com.axp.util.Utility;
 
 @Service("userService")
@@ -244,67 +251,28 @@ public class UserServiceImpl extends ProfessionalServiceImpl implements UserServ
 	@Override
 	public void saveIntegralRecord(AdminUser adminUser,Integer integral,Integer userLevel){
 		
-		QueryModel model = new QueryModel();
-		//新增下级的的时候 adminUser 上级--总部 积分直接新增 记录
-		AdminUserScoreRecord ausr = new AdminUserScoreRecord(); //积分流通交易  谁给了谁
-		ausr.setAdminUser(adminUser);
-		ausr.setAfterScore((adminUser.getScore()==null?0:adminUser.getScore())+integral);
-		ausr.setBeforeScore(adminUser.getIntegral());
-		ausr.setCreateTime(new Timestamp(System.currentTimeMillis()));
-		ausr.setIsValid(true);
-		ausr.setScore(integral);
-		ausr.setValidityTime(new Timestamp(System.currentTimeMillis()));
-		ausr.setRemark("获得上级"+adminUser.getParentAdminUser().getLoginname()+"分配积分"+integral);
-		ausr.setFromAdminUser(adminUser.getParentAdminUser()); //上级
-		adminUserScoreRecordDAO.save(ausr);
+		MyThread my = new MyThread();
+		Thread thread=new Thread(my);
+		my.adminUser = adminUser ; 
+		my.integral = integral;
+		my.userLevel = userLevel;
+		thread.start();
 		
-		Timestamp createTime = new Timestamp(System.currentTimeMillis());
-		Timestamp validityTime =  new Timestamp(DateUtil.addDay2Date(30, new Date()).getTime());
-		if(userLevel == 95){ //总部 直接发放到代理手上
-			AdminUser zb = adminUser.getParentAdminUser();
-			Integer score = zb.getScore();
-			zb.setScore(score+integral);
-			adminUserDAO.merge(zb);
-			model.clearQuery();
-			model.combPreEquals("isValid", true);
-			//model.combLike("newHands", "z-"+zb.getId());
-			model.combPreEquals("adminUser.id", zb.getId(),"adminuserId");
-			model.combIsNull("adminUserDL");
-			List<ScoreMark> scoreMarks = dateBaseDAO.findPageList(ScoreMark.class, model,0,integral);
-			List<DLScoreMark> dlsmList = new ArrayList<DLScoreMark>();
-			for(ScoreMark sm : scoreMarks){
-				sm.setAdminUserDL(adminUser);
-				sm.setRefreshTime(createTime);
-				scoreMarkDAO.saveOrUpdate(sm);
-				
-				DLScoreMark dlsm = new DLScoreMark();
-				dlsm.setAdminUser(adminUser);
-				dlsm.setCreateTime(createTime);
-				dlsm.setIsValid(true);
-				dlsm.setScoreMark(sm);
-				//dlsmList.add(dlsm);
-				dlscoreMarkDAO.save(dlsm);
-			}
 		
-		}else if(userLevel == 99) {  //adminUser 发给总部作为总积分
-			List<ScoreMark> smList = new ArrayList<ScoreMark>();
-			for(int i=0;i<integral ;i++){
-				ScoreMark sm = new ScoreMark();
-				sm.setAdminUser(adminUser);
-				sm.setCreateTime(createTime);
-				sm.setIsValid(true);
-				sm.setRefreshTime(createTime);
-				smList.add(sm);
-			}
-			scoreMarkDAO.saveList(smList);
-			
-			
-			
-			
-		}
+		
+		
+		
 		
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -369,4 +337,88 @@ public class UserServiceImpl extends ProfessionalServiceImpl implements UserServ
 		adminUser.setUsers(user); //原本对应的是粉丝Id
 		adminUserDAO.saveOrUpdate(adminUser);
 }
+	
+	
+}
+
+class MyThread implements Runnable{
+	
+	
+	public AdminUser adminUser;
+	
+	public Integer integral;
+	
+	public Integer userLevel;
+	
+	@Override
+	public void run() {
+		SessionFactory	sessionFactory= (SessionFactory) ToolSpring.getBean("sessionFactory");
+		Session	session=sessionFactory.openSession();	
+		Transaction transaction = session.getTransaction();
+		
+		transaction.begin(); 
+		Session messageSession=sessionFactory.openSession();
+		
+		QueryModel model = new QueryModel();
+		//新增下级的的时候 adminUser 上级--总部 积分直接新增 记录
+		AdminUserScoreRecord ausr = new AdminUserScoreRecord(); //积分流通交易  谁给了谁
+		ausr.setAdminUser(adminUser);
+		ausr.setAfterScore((adminUser.getScore()==null?0:adminUser.getScore())+integral);
+		ausr.setBeforeScore(adminUser.getIntegral());
+		ausr.setCreateTime(new Timestamp(System.currentTimeMillis()));
+		ausr.setIsValid(true);
+		ausr.setScore(integral);
+		ausr.setValidityTime(new Timestamp(System.currentTimeMillis()));
+		ausr.setRemark("获得上级"+adminUser.getParentAdminUser().getLoginname()+"分配积分"+integral);
+		ausr.setFromAdminUser(adminUser.getParentAdminUser()); //上级
+		//adminUserScoreRecordDAO.save(ausr);
+		messageSession.save(ausr);
+		Timestamp createTime = new Timestamp(System.currentTimeMillis());
+		Timestamp validityTime =  new Timestamp(DateUtil.addDay2Date(30, new Date()).getTime());
+		
+		if(userLevel == 95){ //总部 直接发放到代理手上
+			AdminUser zb = adminUser.getParentAdminUser();
+			Integer score = zb.getScore();
+			zb.setScore(score+integral);
+			//adminUserDAO.merge(zb);
+			messageSession.merge(zb);
+			model.clearQuery();
+			model.combPreEquals("isValid", true);
+			//model.combLike("newHands", "z-"+zb.getId());
+			model.combPreEquals("adminUser.id", zb.getId(),"adminuserId");
+			model.combIsNull("adminUserDL");
+			//List<ScoreMark> scoreMarks = dateBaseDAO.findPageList(ScoreMark.class, model,0,integral);
+			List<ScoreMark> scoreMarks = new ArrayList<ScoreMark>(3000);
+			
+			scoreMarks= messageSession.createQuery("from ScoreMark where isvalid = true and adminUserDL is not null and adminuserId ="+zb.getId()+""  ).setFirstResult(0).setMaxResults(integral).list();
+			List<DLScoreMark> dlsmList = new ArrayList<DLScoreMark>();
+			for(ScoreMark sm : scoreMarks){
+				sm.setAdminUserDL(adminUser);
+				sm.setRefreshTime(createTime);
+//				scoreMarkDAO.saveOrUpdate(sm);
+				messageSession.saveOrUpdate(sm);
+				DLScoreMark dlsm = new DLScoreMark();
+				dlsm.setAdminUser(adminUser);
+				dlsm.setCreateTime(createTime);
+				dlsm.setIsValid(true);
+				dlsm.setScoreMark(sm);
+				//dlsmList.add(dlsm);
+				//dlscoreMarkDAO.save(dlsm);
+				messageSession.save(dlsm);
+			}
+		
+		}else if(userLevel == 99) {  //adminUser 发给总部作为总积分
+			List<ScoreMark> smList = new ArrayList<ScoreMark>();
+			for(int i=0;i<integral ;i++){
+				ScoreMark sm = new ScoreMark();
+				sm.setAdminUser(adminUser);
+				sm.setCreateTime(createTime);
+				sm.setIsValid(true);
+				sm.setRefreshTime(createTime);
+				//smList.add(sm);
+				messageSession.save(sm);
+			}
+			//scoreMarkDAO.saveList(smList);
+		}
+	}
 }
